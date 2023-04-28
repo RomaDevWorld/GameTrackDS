@@ -1,0 +1,8 @@
+#Compiled folder
+dist/
+
+#External modules
+node_modules/
+
+#Environment variables
+.env
