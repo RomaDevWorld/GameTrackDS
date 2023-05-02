@@ -1,5 +1,6 @@
 const cd = new Set(); //New set for the cooldowns
 const cdTime = 5000; //If you want to, you can change the cooldown time (miliseconds)
+import getLocale from "../functions/getLocale";
  
 module.exports = {
     name: 'interactionCreate',
@@ -8,7 +9,7 @@ module.exports = {
 
         if(interaction.isCommand()){ //If interaction is command
         if (cd.has(interaction.user.id)) { //If Set has user id
-            await interaction.reply("Cooldown buddy", { ephemeral: true })
+            await interaction.reply(await getLocale(interaction.locale, "cooldown"), { ephemeral: true })
             //Reply with cd message
           } else {
             const command = interaction.client.commands.get(interaction.commandName) //Get command name from interaction
