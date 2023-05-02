@@ -9,7 +9,13 @@ module.exports = {
     execute (client: any, commands: any[]) {
         console.log(`${client.user.tag} is online.`)
 
-        client.user.setActivity('with his balls', { type: ActivityType.Playing }); //Client's activity
+        const info: any = {}
+        info.Guilds = client.guilds.cache.size
+        info.Users = client.users.cache.size
+        info.Channels = client.channels.cache.size
+        console.table(info)
+
+        client.user.setActivity('what does society playing', { type: ActivityType.Watching }); //Client's activity
 
         const CLIENT_ID = client.user.id 
         const rest = new REST({
