@@ -3,36 +3,12 @@
 # Цей бот зараз онлайн. Ви можете його спробувати, якщо бажаєте
 
 <div>
-  <a class="button" href="https://discord.com/api/oauth2/authorize?client_id=1030546888367288320&permissions=3072&scope=bot">
+  <a class="button" href="https://discord.com/api/oauth2/authorize?client_id=1030546888367288320&permissions=3072&scope=bot" style="display: flex; justify-content: center; font-size: 25px">
     <div class="text">
       НАТИСНІТЬ ТУТ ЩОБ ДОДАТИ
     </div>
   </a>
 </div>
-
-<style>
-  .button {
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
-    text-decoration: none;
-    color: black;
-  }
-  .text {
-    background-color: darkgrey;
-    padding: 5px; 
-    border-radius: 10px;
-    transition: background-color, color 0.3s ease-in-out;
-  }
-  .text:hover{
-      background-color: grey;
-      color: white;
-    }
-  .button:hover{
-      text-decoration: none;
-      color: white;
-  }
-</style>
 
 ## Як використовувати?
 Як тільки Ви додасте цього бота на сервер, він буде дивитись які ігри грають участники серверу. Як тільки участник закриває гру, бот бачить це, та записує час проведений у грі до бази данних.

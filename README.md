@@ -3,36 +3,12 @@
 # This bot is online now. You can try it if you want to 
 
 <div>
-  <a class="button" href="https://discord.com/api/oauth2/authorize?client_id=1030546888367288320&permissions=3072&scope=bot">
+  <a class="button" href="https://discord.com/api/oauth2/authorize?client_id=1030546888367288320&permissions=3072&scope=bot" style="display: flex; justify-content: center; font-size: 25px">
     <div class="text">
       CLICK HERE TO ADD
     </div>
   </a>
 </div>
-
-<style>
-  .button {
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
-    text-decoration: none;
-    color: black;
-  }
-  .text {
-    background-color: darkgrey;
-    padding: 5px; 
-    border-radius: 10px;
-    transition: background-color, color 0.3s ease-in-out;
-  }
-  .text:hover{
-      background-color: grey;
-      color: white;
-    }
-  .button:hover{
-      text-decoration: none;
-      color: white;
-  }
-</style>
 
 ## How to use?
 As soon as you add this bot to your server, it will see what games members are playing. If member close the game, bot will see it, and create a new record in database.
