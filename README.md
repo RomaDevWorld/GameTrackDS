@@ -28,7 +28,7 @@ You can use `/flush`
 
 Currently our bot has 2 languages: English and Ukrainian
 
-Clone this repository using `git clone git@github.com:RomaDevWorld/DJS-TS.git`, make some changes in `/src/functions/getLocale.ts`, then commit and push your changes with `git commit -a -m "Change: Localization"`
+Clone this repository using `git clone git@github.com:RomaDevWorld/GameTrackDS.git`, make some changes in `/src/functions/getLocale.ts`, then commit and push your changes with `git commit -a -m "Change: Localization"`
 
 Finnaly, push your changes with `git push`
 

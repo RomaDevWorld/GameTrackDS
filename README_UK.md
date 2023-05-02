@@ -28,7 +28,7 @@
 
 Поки-що наш бот підтримує 2 мови: англійська та українська
 
-1. Клонуйте цей репозиторій за допомогою `git clone git@github.com:RomaDevWorld/DJS-TS.git`
+1. Клонуйте цей репозиторій за допомогою `git clone git@github.com:RomaDevWorld/GameTrackDS.git`
 2. Змініть файл `/src/functions/getLocale.ts`, потім запишіть свої зміни, використовуючи `git commit -a -m "Change: Localization"`
 3. Нарешті, синхронізуйте зміни `git push`
 
