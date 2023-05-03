@@ -28,7 +28,7 @@ module.exports = {
 
         let games: any = await Activity.findAll({ 
             where: { userId: interaction.user.id },
-            include: { model: Game, attributes: ['name'] } // злиття з таблицею Game та вибірка лише колонки з іменем гри
+            include: { model: Game, attributes: ['name'] }
         });
 
         games = Object.values(games).sort((a: any, b: any) => b.time - a.time);

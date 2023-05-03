@@ -18,7 +18,7 @@ module.exports = {
 
         const games: any = await Activity.findAll({ 
             where: { userId: members },
-            include: { model: Game, attributes: ['name', 'id'] } // злиття з таблицею Game та вибірка лише колонки з іменем гри
+            include: { model: Game, attributes: ['name', 'id'] }
         });
 
         if(!games[0]) return await interaction.reply({ content: await getLocale(interaction.locale, "server-nostat"), ephemeral: true })
