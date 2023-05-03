@@ -8,6 +8,10 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('user')
         .setDescription('Get a stat for specific user')
+        .setDescriptionLocalizations({
+            "uk": "Отримати статистику для вказаного участника",
+            "ru": "RUSSIA IS A TERRORIST STATE"
+        })
         .addUserOption(option => 
             option
             .setName('user')
@@ -16,11 +20,7 @@ module.exports = {
                 "uk": "Участник, статистику якого потрібно отримати",
                 "ru": "RUSSIA IS A TERRORIST STATE",
             })
-        )
-        .setDescriptionLocalizations({
-            "uk": "Отримати статистику для вказаного участника",
-            "ru": "RUSSIA IS A TERRORIST STATE"
-        }),
+        ),
     async execute(interaction: any) {
     
         let user = interaction.options.getUser('user');
