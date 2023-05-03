@@ -27,7 +27,7 @@ module.exports = {
         if(!user) user = interaction.user;
 
         let games: any = await Activity.findAll({ 
-            where: { userId: interaction.user.id },
+            where: { userId: user.id },
             include: { model: Game, attributes: ['name'] }
         });
 
@@ -37,7 +37,7 @@ module.exports = {
         else if(!games[0] && user.id !== interaction.user.id) return await interaction.reply({ content: `${await getLocale(interaction.locale, 'user-user-nostat', user)}`, ephemeral: true })
 
         const embed = new EmbedBuilder()
-        .setAuthor({ name: await getLocale(interaction.locale, 'user-embed-author') })
+        .setAuthor({ name: await getLocale(interaction.locale, 'user-embed-author', user.username) })
         .setDescription(games.map((i: { dataValues: { game: { name: any; }; time: any; }; }) => `**${i.dataValues.game.name}** - ${formatTime(i.dataValues.time, interaction.locale)}`).join('\n'))
 
         await interaction.reply({ embeds: [embed] });

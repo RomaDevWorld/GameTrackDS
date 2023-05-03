@@ -12,7 +12,7 @@ const localization: Localization = {
         "server-embed-author": "Server statistics",
         "server-nostat": "This server has no games played. Play one to get started!",
 
-        "user-embed-author": "Your statistics",
+        "user-embed-author": "%VAR%'s statisics",
         "user-self-nostat": "You have no games played. Play one to get started!",
         "user-user-nostat": "%VAR% have no games played. I mean.. you could ask him to play something",
 
@@ -28,7 +28,7 @@ const localization: Localization = {
 
         "ping-main": "Понг! %VAR%",
 
-        "user-embed-author": "Ваша статистика",
+        "user-embed-author": "Статистика %VAR%",
         "user-self-nostat": "У Вас немає зіграних ігор. Зіграй одну щоб побачити її тут!",
         "user-user-nostat": "%VAR% ніколи не грав у ігри. Ну.. Ви б могли його попросити зіграти у щось",
 

@@ -17,6 +17,7 @@ class Activity extends Model<ActivityAttributes> implements ActivityAttributes {
 Activity.init({
   time: {
     type: DataTypes.INTEGER,
+    defaultValue: 0,
     allowNull: false,
   },
   userId: {

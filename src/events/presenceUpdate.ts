@@ -17,35 +17,20 @@ module.exports = {
             activity: newMember?.activities[0]
         }
 
-        if(!oldPresence.activity) return;
-        if(oldPresence.activity?.type !== 0) return;
-        if(!oldPresence.activity?.applicationId) return;
+        if(!oldPresence.activity) return console.log("No activity before")
+        if(oldPresence.activity?.type !== 0) return console.log("Not a game")
+        // if(!oldPresence.activity?.applicationId) oldPresence.activity.applicationId = "0"
+        if(!oldPresence.activity?.applicationId) return console.log("No APP id")
         
         const time = Date.now() - oldPresence?.activity?.createdTimestamp
-
-        const activity = await Activity.findOne({
-            where: {
-                userId: newMember.user.id,
-                gameId: oldPresence.activity.applicationId,    
-            },
-        });
         
         const [ gameName, created ] = await Game.findOrCreate({ where: { id: oldPresence.activity.applicationId } }); 
-
         await gameName.update({ name: oldPresence.activity.name });
 
-        if (activity) {
-            await activity.update({
-                time: activity.time + time,
-            });
-        } else {
-            await Activity.create({
-                time: time,
-                userId: newMember.user.id,
-                gameId: oldPresence.activity.applicationId,
-            });
-        }
+        const [ activity, createdAcitity ] = await Activity.findOrCreate({ where: { gameId: oldPresence.activity.applicationId, userId: newMember.user.id } }); 
+        await activity.update({ time: activity.time + time })
 
+        console.log(activity)
 }}
 
 interface Presence {
