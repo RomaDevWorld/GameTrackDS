@@ -8,7 +8,7 @@ module.exports = {
         .setDescription('Flush all the data about the games you have played')
         .setDescriptionLocalizations({
             "uk": "Обнулити всі данні, про те які ігри ти грав",
-            "en-GB": "Time for a bit of digital cleansing, eh?",
+            "en-GB": "Time for a bit of digital cleaning, eh?",
             "ru": "RUSSIA IS A TERRORIST STATE"
         }),
     async execute(interaction: any) {
@@ -55,7 +55,7 @@ module.exports = {
         })
         collector?.on('end', async (collected: any) => {
             if(!collected.first()){
-                interaction.followUp(await getLocale(interaction.locale, 'flush-timeout'))
+                interaction.followUp({ content: await getLocale(interaction.locale, 'flush-timeout'), ephemeral: true })
                 return await interaction.editReply({ components: [] })
             }
         })

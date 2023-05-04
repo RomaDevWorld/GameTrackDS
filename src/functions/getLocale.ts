@@ -22,6 +22,7 @@ const localization: Localization = {
         "flush-confirm-footer": "This action is irreversible",
         "flush-confirm-button": "Yes, flush",
         "flush-success": "Flushed everything about you from database",
+        "flush-timeout": "Flushing timed out",
 
         "top-notfound": "404: No game found",
         "top-notfound-footer": "Hint: You must specify a full name of the game. You can also use game's id",
@@ -46,6 +47,7 @@ const localization: Localization = {
       "flush-confirm-footer": "Understand, once you go ahead, there's no turnin' back.",
       "flush-confirm-button": "Flush it all down the loo like yesterday's bangers and mash!",
       "flush-success": "Blimey, mate! We've gone and wiped the slate clean! Your gaming history is as empty as a pub on a Monday mornin!",
+      "flush-timeout": "My man, flushing time got out",
       
       "top-notfound": "404: Seems like we can't seem to find any trace of the game you're lookin' for!",
       "top-notfound-footer": "Nugget of knowledge: Give the full name, or the game's ID, or we'll be as lost as a tourist in London!",
@@ -70,6 +72,7 @@ const localization: Localization = {
         "flush-confirm-footer": "Ця дія є незворотньою",
         "flush-confirm-button": "Так, видалити",
         "flush-success": "Видалено всі записи про Вас з бази данних",
+        "flush-timeout": "Час видалення вичерпано",
 
         "top-notfound": "404: Гру не знайдено",
         "top-notfound-footer": "Підказка: Ви повинні вказати повну назву. Ви можете використовувати ID гри",
