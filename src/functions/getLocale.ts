@@ -5,6 +5,8 @@ interface Localization {
 }
 const localization: Localization = {
     "en-US": {
+        "timeformat": "Time format: DAYS:HOURS:MINUTES",
+
         "cooldown": 'Cooldown, buddy. Wait a few seconds and try again.',
 
         "ping-main": "Pong! %VAR%",
@@ -32,8 +34,6 @@ const localization: Localization = {
     "en-GB": {
       "cooldown": 'Steady on, mate. Give it a tick and \'ave another go, yeah?',
 
-      "ping-main": "Pong! %VAR%",
-
       "server-embed-author": "Blimey, let's 'ave a butcher's at them server stats, shall we?",
       "server-nostat": "Blimey, this server's a bit quiet, innit? 'Ave a go at a game to get the ball rollin', why don't ya?",
 
@@ -55,6 +55,8 @@ const localization: Localization = {
       "top-embed-author": 'The top 10 players at %VAR% are as sharp as a tack and quick as a wink. (%VAR%)',
   },
     "uk": {
+        "timeformat": "Формат часу: ДНІ:ГОДИНИ:ХВИЛИНИ",
+
         "cooldown": 'Охолодись, козаче. Зачекай декілька секунд та спробуй ще раз.',
 
         "ping-main": "Понг! %VAR%",
