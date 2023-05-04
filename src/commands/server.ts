@@ -10,6 +10,7 @@ module.exports = {
         .setDescription('Get a stat for an entire server')
         .setDescriptionLocalizations({
             "uk": "Отримати статистику для усього серверу",
+            "en-GB": "We'll suss out everyone's stats for ya!",
             "ru": "RUSSIA IS A TERRORIST STATE"
         }),
     async execute(interaction: any) {

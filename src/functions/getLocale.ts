@@ -25,7 +25,7 @@ const localization: Localization = {
 
         "top-notfound": "404: No game found",
         "top-notfound-footer": "Hint: You must specify a full name of the game. You can also use game's id",
-
+        "top-nostat": "No one in your server hasn't played this game yet. Play at least once to see it in here!",
         "top-embed-author": 'Top 10 players at "%VAR%" (%VAR%)',
     },
     "en-GB": {
@@ -46,10 +46,10 @@ const localization: Localization = {
       "flush-confirm-footer": "Understand, once you go ahead, there's no turnin' back.",
       "flush-confirm-button": "Flush it all down the loo like yesterday's bangers and mash!",
       "flush-success": "Blimey, mate! We've gone and wiped the slate clean! Your gaming history is as empty as a pub on a Monday mornin!",
-
+      
       "top-notfound": "404: Seems like we can't seem to find any trace of the game you're lookin' for!",
       "top-notfound-footer": "Nugget of knowledge: Give the full name, or the game's ID, or we'll be as lost as a tourist in London!",
-
+      "top-nostat": "Blimey, not a sausage! It looks like no one on your server's been giving this game a go. Time to roll up your sleeves and get stuck in, mate! Play it once and we'll make sure it shows up here in all its glory!",
       "top-embed-author": 'The top 10 players at %VAR% are as sharp as a tack and quick as a wink. (%VAR%)',
   },
     "uk": {
@@ -73,7 +73,7 @@ const localization: Localization = {
 
         "top-notfound": "404: Гру не знайдено",
         "top-notfound-footer": "Підказка: Ви повинні вказати повну назву. Ви можете використовувати ID гри",
-
+        "top-nostat": "Ніхто з участників серверу ще не грав у цю гру. Зіграйте разочок щоб побачити її тут!",
         "top-embed-author": 'Топ 10 гравців у "%VAR%" (%VAR%)',
     }
 }

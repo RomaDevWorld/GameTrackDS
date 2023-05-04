@@ -8,6 +8,7 @@ module.exports = {
         .setDescription('Flush all the data about the games you have played')
         .setDescriptionLocalizations({
             "uk": "Обнулити всі данні, про те які ігри ти грав",
+            "en-GB": "Time for a bit of digital cleansing, eh?",
             "ru": "RUSSIA IS A TERRORIST STATE"
         }),
     async execute(interaction: any) {
