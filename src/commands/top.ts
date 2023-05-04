@@ -47,7 +47,7 @@ module.exports = {
         const members = interaction.guild.members.cache.filter((member: { user: { bot: boolean; }; }) => !member.user.bot).map((member: { id: number; }) => member.id);
 
         const activities: any = await Activity.findAll({ 
-            where: { userId: members },
+            where: { userId: members, gameId: fetchedGame.id },
         });
 
         const top = activities.sort((a: { time: number; }, b: { time: number; }) => b.time - a.time)
