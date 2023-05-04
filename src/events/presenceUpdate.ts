@@ -21,7 +21,16 @@ module.exports = {
         if(oldPresence.activity?.type !== 0) return;
         if(!oldPresence.activity?.applicationId) return;
         
+        const ignoreList = [
+            "356876590342340608", //"Rainbow Six Siedge" 
+            "575412499399180288", //"MORDHAU"
+            "356873622985506820", //"PUBG"
+            "451540626270584833" //"FOR THE KING"
+        ]
+        if(ignoreList.includes(oldPresence.activity.applicationId)) return;
+
         const time = Date.now() - oldPresence?.activity?.createdTimestamp
+        if(time > 60000) return;
         
         const [ gameName, created ] = await Game.findOrCreate({ where: { id: oldPresence.activity.applicationId } }); 
         await gameName.update({ name: oldPresence.activity.name });
