@@ -50,20 +50,10 @@ module.exports = {
             where: { userId: members },
         });
 
-        let activitiesId: string[] = []
-        let activitiesList: any = {}
-        for (let i in activities) {
-            activitiesId.push(activities[i].dataValues.id)
-            activitiesList[activities[i].dataValues.id] = {
-                user: activities[i].dataValues.userId,
-                time: activities[i].dataValues.time
-            }
-        }
-
-        activitiesId.sort((a, b) => activitiesList[b].time - activitiesList[a].time)
+        const top = activities.sort((a: { time: number; }, b: { time: number; }) => b.time - a.time)
+            .map((i: { userId: string; time: number; }, index: number) => `**${index + 1}.** ${interaction.guild.members.cache.get(i.userId)} - ${formatTime(i.time, interaction.locale)}`)
             .slice(0, 10)
-
-        const top = activitiesId.map(( i, index ) => `**${index + 1}.** ${interaction.guild.members.cache.get(activitiesList[i].user)} - ${formatTime(activitiesList[i].time, interaction.locale)}`).join(`\n`)
+            .join(`\n`);
 
         const embed = new EmbedBuilder()
         .setAuthor({ name: await getLocale(interaction.locale, 'top-embed-author', fetchedGame.name, fetchedGame.id) })
