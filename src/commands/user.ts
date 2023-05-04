@@ -40,7 +40,7 @@ module.exports = {
 
         const embed = new EmbedBuilder()
         .setAuthor({ name: await getLocale(interaction.locale, 'user-embed-author', user.username) })
-        .setDescription(games.map((i: { dataValues: { game: { name: any; }; time: any; }; }) => `**${i.dataValues.game.name}** - ${formatTime(i.dataValues.time, interaction.locale)}`).join('\n'))
+        .setDescription(games.map((i: { dataValues: { game: { name: any; }; time: any; }; }) => `**${i.dataValues.game.name}** - ${formatTime(i.dataValues.time)}`).join('\n'))
 
         await interaction.reply({ embeds: [embed] });
     }

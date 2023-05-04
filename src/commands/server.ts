@@ -43,7 +43,7 @@ module.exports = {
 
         const embed = new EmbedBuilder()
         .setAuthor({ name: await(getLocale(interaction.locale, 'server-embed-author')) })
-        .setDescription(gamesList.map((i: { name: string; time: number; }) => `**${i.name}** - ${formatTime(i.time, interaction.locale)}`).join('\n'))
+        .setDescription(gamesList.map((i: { name: string; time: number; }) => `**${i.name}** - ${formatTime(i.time)}`).join('\n'))
         .setColor('Blue')
         await interaction.reply({ embeds: [embed] });
 

@@ -60,7 +60,7 @@ module.exports = {
         }
 
         const top = activities.sort((a: { time: number; }, b: { time: number; }) => b.time - a.time)
-            .map((i: { userId: string; time: number; }, index: number) => `**${index + 1}.** ${interaction.guild.members.cache.get(i.userId)} - ${formatTime(i.time, interaction.locale)}`)
+            .map((i: { userId: string; time: number; }, index: number) => `**${index + 1}.** ${interaction.guild.members.cache.get(i.userId)} - ${formatTime(i.time)}`)
             .slice(0, 10)
             .join(`\n`);
 
