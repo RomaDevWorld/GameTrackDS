@@ -28,6 +28,30 @@ const localization: Localization = {
 
         "top-embed-author": 'Top 10 players at "%VAR%" (%VAR%)',
     },
+    "en-GB": {
+      "cooldown": 'Steady on, mate. Give it a tick and \'ave another go, yeah?',
+
+      "ping-main": "Pong! %VAR%",
+
+      "server-embed-author": "Blimey, let's 'ave a butcher's at them server stats, shall we?",
+      "server-nostat": "Blimey, this server's a bit quiet, innit? 'Ave a go at a game to get the ball rollin', why don't ya?",
+
+      "user-embed-author": "Let's 'ave a gander at %VAR%'s numbers and see 'ow they stack up, eh?",
+      "user-self-nostat": "Well, you've not 'ad a crack at any games yet, 'ave ya? Get yer act together and 'ave a go at one to get things goin', mate!",
+      "user-user-nostat": "%VAR%'s a bit of a slacker, ain't 'e? Might as well give 'im a nudge and see if 'e fancies 'avin' a go at one of them games, eh?",
+
+      "flush-nostat": "Well, looks like there's no games for you to chuck down the loo, mate! Better get to playin' if you want to get in on the action.",
+      "flush-confirm-author": "⚠️ Steady on, mate! If you go through with this, we'll be in the dark about all them games you've been 'avin' a crack at.",
+      "flush-confirm-desc": "You're not thinkin' of scrappin' a %VAR% rows from the database, are ya?",
+      "flush-confirm-footer": "Understand, once you go ahead, there's no turnin' back.",
+      "flush-confirm-button": "Flush it all down the loo like yesterday's bangers and mash!",
+      "flush-success": "Blimey, mate! We've gone and wiped the slate clean! Your gaming history is as empty as a pub on a Monday mornin!",
+
+      "top-notfound": "404: Seems like we can't seem to find any trace of the game you're lookin' for!",
+      "top-notfound-footer": "Nugget of knowledge: Give the full name, or the game's ID, or we'll be as lost as a tourist in London!",
+
+      "top-embed-author": 'The top 10 players at %VAR% are as sharp as a tack and quick as a wink. (%VAR%)',
+  },
     "uk": {
         "cooldown": 'Охолодись, козаче. Зачекай декілька секунд та спробуй ще раз.',
 
