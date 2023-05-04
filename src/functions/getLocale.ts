@@ -12,7 +12,7 @@ const localization: Localization = {
         "server-embed-author": "Server statistics",
         "server-nostat": "This server has no games played. Play one to get started!",
 
-        "user-embed-author": "Your statistics",
+        "user-embed-author": "%VAR%'s statisics",
         "user-self-nostat": "You have no games played. Play one to get started!",
         "user-user-nostat": "%VAR% have no games played. I mean.. you could ask him to play something",
 
@@ -22,13 +22,18 @@ const localization: Localization = {
         "flush-confirm-footer": "This action is irreversible",
         "flush-confirm-button": "Yes, flush",
         "flush-success": "Flushed everything about you from database",
+
+        "top-notfound": "404: No game found",
+        "top-notfound-footer": "Hint: You must specify a full name of the game. You can also use game's id",
+
+        "top-embed-author": 'Top 10 players at "%VAR%" (%VAR%)',
     },
     "uk": {
         "cooldown": 'Охолодись, козаче. Зачекай декілька секунд та спробуй ще раз.',
 
         "ping-main": "Понг! %VAR%",
 
-        "user-embed-author": "Ваша статистика",
+        "user-embed-author": "Статистика %VAR%",
         "user-self-nostat": "У Вас немає зіграних ігор. Зіграй одну щоб побачити її тут!",
         "user-user-nostat": "%VAR% ніколи не грав у ігри. Ну.. Ви б могли його попросити зіграти у щось",
 
@@ -41,6 +46,11 @@ const localization: Localization = {
         "flush-confirm-footer": "Ця дія є незворотньою",
         "flush-confirm-button": "Так, видалити",
         "flush-success": "Видалено всі записи про Вас з бази данних",
+
+        "top-notfound": "404: Гру не знайдено",
+        "top-notfound-footer": "Підказка: Ви повинні вказати повну назву. Ви можете використовувати ID гри",
+
+        "top-embed-author": 'Топ 10 гравців у "%VAR%" (%VAR%)',
     }
 }
 
@@ -50,19 +60,19 @@ const getLocale = async(language: string, value: string, ...vars: any[]) => {
 
     if (!localization[language]) localization[language] = localization['en-US'];
     if (!localization[language][value]){
-      console.error(`There is no localization for value: ${value} in language: ${language}.\nWe'll try to use "en-US" instead to prevent an error.`)
+      console.error(`There is no localization for "${value}" in language: ${language}. We'll use default language`)
       localization[language] = localization['en-US'];
     }
 
     let locale = localization[language][value];
 
     if(!locale){
-      console.error(`There is no localization for value: ${value} in language: ${language}.\nWe'll use value name instead to prevent an error.`)
+      console.error(`There is no localization for "${value}" in language: en-US. We'll use a placeholder`)
       return value
     }
 
     let count = 0;
-    locale = locale.replace(/%VAR%/g, () => vars[count] !== null ? vars[count] : "%VAR%");
+    locale = locale.replace(/%VAR%/g, () => vars[count++] !== undefined ? vars[count - 1] : "%VAR%");
 
     return locale;
 }

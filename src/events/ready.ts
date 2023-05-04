@@ -15,14 +15,14 @@ module.exports = {
         info.Channels = client.channels.cache.size
         console.table(info)
 
-        client.user.setActivity('what does society playing', { type: ActivityType.Watching }); //Client's activity
+        client.user.setActivity('what does society playing', { type: ActivityType.Watching });
 
         const CLIENT_ID = client.user.id 
         const rest = new REST({
             version: '10'
         }).setToken(process.env.TOKEN!);
         (async () => {
-            if(1 > 2){ //Change it to (1 < 2) to delete all the slash commands
+            if(1 > 2){
                 try{
                     rest.put(Routes.applicationGuildCommands(CLIENT_ID, process.env.GUILD_ID!), { body: [] })
                     .then(() => console.log('All commands were deleted [GLOBAL]'))

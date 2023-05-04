@@ -17,10 +17,11 @@ class Activity extends Model<ActivityAttributes> implements ActivityAttributes {
 Activity.init({
   time: {
     type: DataTypes.INTEGER,
+    defaultValue: 0,
     allowNull: false,
   },
   userId: {
-    type: DataTypes.INTEGER,
+    type: DataTypes.STRING,
     allowNull: false
   },
   gameId: {
