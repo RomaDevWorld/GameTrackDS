@@ -30,7 +30,7 @@ module.exports = {
         if(ignoreList.includes(oldPresence.activity.applicationId)) return;
 
         const time = Date.now() - oldPresence?.activity?.createdTimestamp
-        if(time > 60000) return;
+        if(time < 60000) return;
         
         const [ gameName, created ] = await Game.findOrCreate({ where: { id: oldPresence.activity.applicationId } }); 
         await gameName.update({ name: oldPresence.activity.name });
