@@ -30,6 +30,15 @@ const localization: Localization = {
         "top-notfound-footer": "Hint: You must specify a full name of the game. You can also use game's id",
         "top-nostat": "No one in your server hasn't played this game yet. Play at least once to see it in here!",
         "top-embed-author": 'Top 10 players at "%VAR%" (%VAR%)',
+
+        "link-nogame": "There's no game with this name or id",
+        "link-success": "Successfully created or updated link",
+
+        "list-author": "Links",
+        "list-nolinks": "No links created",
+
+        "remove-nolink": "No game was linked to this role",
+        "remove-success": "Successfully removed link",
     },
     "en-GB": {
       "cooldown": 'Steady on, mate. Give it a tick and \'ave another go, yeah?',
@@ -80,6 +89,15 @@ const localization: Localization = {
         "top-notfound-footer": "Підказка: Ви повинні вказати повну назву. Ви можете використовувати ID гри",
         "top-nostat": "Ніхто з участників серверу ще не грав у цю гру. Зіграйте разочок щоб побачити її тут!",
         "top-embed-author": 'Топ 10 гравців у "%VAR%" (%VAR%)',
+
+        "link-nogame": "Не знайдено гри з такою назвою або ID",
+        "link-success": "Прив'язка успішно створена або оновлена",
+
+        "list-author": "Усі прив'язки",
+        "list-nolinks": "Прив'язки відсутні",
+
+        "remove-nolink": "До цієї ролі не прив'язані ігри",
+        "remove-success": "Прив'язка успішно видалена",
     }
 }
 

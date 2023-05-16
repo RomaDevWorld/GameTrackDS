@@ -1,5 +1,7 @@
 import Activity from "../models/activity"
 import Game from "../models/game"
+import client from "../utils/client"
+import Links from "../models/links"
 
 module.exports = {
     name: 'presenceUpdate',
@@ -37,6 +39,22 @@ module.exports = {
 
         const [ activity, createdAcitity ] = await Activity.findOrCreate({ where: { gameId: oldPresence.activity.applicationId, userId: newMember.user.id } }); 
         await activity.update({ time: activity.time + time })
+
+        //linking roles
+        const guilds = client.guilds.cache
+        guilds.forEach(async (guild) => {
+            const member = guild.members.cache.get(newMember.user.id)
+            if(member){
+                const link: any = await Links.findOne({ where: { guildId: guild.id, gameId: oldPresence.activity.applicationId }});
+
+                if(link){
+                    if((activity.time) >= link.time){
+                        const role = guild.roles.cache.get(link.roleId)
+                        if(role) member.roles.add(role).catch(err => console.error(err))
+                    }
+                }
+            }
+        })
 }}
 
 interface Presence {
