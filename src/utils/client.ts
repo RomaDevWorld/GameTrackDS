@@ -7,8 +7,6 @@ const client = new Client({ intents: [
     GatewayIntentBits.GuildPresences
 ] })
 
-client.activities = {}
-
 export default client;
 
 declare module "discord.js" {

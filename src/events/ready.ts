@@ -15,7 +15,14 @@ module.exports = {
         info.Channels = client.channels.cache.size
         console.table(info)
 
-        client.user.setActivity('what does society playing', { type: ActivityType.Watching });
+        const activities = [
+            "what does society playing",
+            "help Ukraine gain freedom!",
+        ]
+
+        setInterval(() => {
+            client.user.setActivity(activities[Math.floor(Math.random() * activities.length)], { type: ActivityType.Watching })
+        }, 60000 * 5)
 
         const CLIENT_ID = client.user.id 
         const rest = new REST({
