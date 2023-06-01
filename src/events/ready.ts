@@ -1,13 +1,13 @@
 import { REST } from '@discordjs/rest'
 import { Routes } from 'discord-api-types/v9'
-import { ActivityType } from 'discord.js'
+import { ActivityType, Client } from 'discord.js'
 require('dotenv').config()
 
 module.exports = {
     name: 'ready',
     once: true,
-    execute (client: any, commands: any[]) {
-        console.log(`${client.user.tag} is online.`)
+    execute (client: Client, commands: any[]) {
+        console.log(`${client!.user!.tag} is online.`)
 
         const info: any = {}
         info.Guilds = client.guilds.cache.size
@@ -21,10 +21,10 @@ module.exports = {
         ]
 
         setInterval(() => {
-            client.user.setActivity(activities[Math.floor(Math.random() * activities.length)], { type: ActivityType.Watching })
+            client!.user!.setActivity(activities[Math.floor(Math.random() * activities.length)], { type: ActivityType.Watching })
         }, 60000 * 5)
 
-        const CLIENT_ID = client.user.id 
+        const CLIENT_ID = client!.user!.id 
         const rest = new REST({
             version: '10'
         }).setToken(process.env.TOKEN!);

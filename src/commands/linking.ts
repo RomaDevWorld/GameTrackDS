@@ -65,7 +65,7 @@ module.exports = {
                         .setName('role')
                         .setDescription('Role to remove linking')
                         .setDescriptionLocalizations({
-                            "uk": 'Роль, прив\'язку з якої потрібно зняти', 
+                            "uk": "Роль, прив'язку з якої потрібно зняти", 
                             "ru": "RUSSIA IS A TERRORIST STATE"
                         })
                         .setRequired(true)

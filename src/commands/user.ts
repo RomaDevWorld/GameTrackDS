@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
+import { SlashCommandBuilder, EmbedBuilder, CommandInteraction } from 'discord.js';
 import Game from '../models/game';
 import Activity from '../models/activity';
 import formatTime from '../functions/formatTime';
@@ -23,7 +23,7 @@ module.exports = {
                 "ru": "RUSSIA IS A TERRORIST STATE",
             })
         ),
-    async execute(interaction: any) {
+    async execute(interaction: CommandInteraction) {
     
         let user = interaction.options.getUser('user');
         if(!user) user = interaction.user;

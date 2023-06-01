@@ -37,7 +37,7 @@ module.exports = {
         const [ gameName, created ] = await Game.findOrCreate({ where: { id: oldPresence.activity.applicationId } }); 
         await gameName.update({ name: oldPresence.activity.name });
 
-        const [ activity, createdAcitity ] = await Activity.findOrCreate({ where: { gameId: oldPresence.activity.applicationId, userId: newMember.user.id } }); 
+        const [ activity, createdActivity ] = await Activity.findOrCreate({ where: { gameId: oldPresence.activity.applicationId, userId: newMember.user.id } }); 
         await activity.update({ time: activity.time + time })
 
         //linking roles
@@ -58,7 +58,7 @@ module.exports = {
 }}
 
 interface Presence {
-    id: number,
+    id: string;
     status: string,
     activity: any
 }

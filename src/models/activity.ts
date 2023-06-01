@@ -8,10 +8,15 @@ interface ActivityAttributes {
   gameId: string;
 }
 
-class Activity extends Model<ActivityAttributes> implements ActivityAttributes {
+export class Activity extends Model<ActivityAttributes> implements ActivityAttributes {
   public time!: number;
   public userId!: number;
   public gameId!: string;
+  game!: {
+    id: string;
+    name: string;
+    time: number;
+  };
 }
 
 Activity.init({

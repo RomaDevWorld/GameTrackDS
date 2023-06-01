@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, EmbedBuilder, GuildManager } from 'discord.js';
+import { SlashCommandBuilder, EmbedBuilder } from 'discord.js';
 import Game from '../models/game';
 import Activity from '../models/activity';
 import formatTime from '../functions/formatTime';

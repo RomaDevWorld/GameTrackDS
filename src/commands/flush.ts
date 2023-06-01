@@ -7,11 +7,11 @@ module.exports = {
         .setName('flush')
         .setDescription('Flush all the data about the games you have played')
         .setDescriptionLocalizations({
-            "uk": "Обнулити всі данні, про те які ігри ти грав",
+            "uk": "Обнулити всі дані, про те які ігри ти грав",
             "en-GB": "Time for a bit of digital cleaning, eh?",
             "ru": "RUSSIA IS A TERRORIST STATE"
         }),
-    async execute(interaction: any) {
+    async execute(interaction: any) { //Not sure what type to use here ¯\_(ツ)_/¯
 
         const allAct = await Activity.findAll({
             where: { userId: interaction.user.id }
