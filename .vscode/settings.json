@@ -1,11 +1,32 @@
 {
-    "cSpell.words": [
-        "innere",
-        "lookin",
-        "nostat",
-        "Siedge",
-        "tearin",
-        "timeformat",
-        "usea"
-    ]
+  "editor.tabSize": 2,
+  "prettier.prettierPath": "./node_modules/prettier",
+  "cSpell.words": [
+    "Мемна",
+    "пінгу",
+    "Понг",
+    "avin",
+    "Bri'ish",
+    "cooldown",
+    "goin",
+    "innere",
+    "linebreak",
+    "lookin",
+    "MORDHAU",
+    "mornin",
+    "nogame",
+    "nolinks",
+    "nopermission",
+    "nostat",
+    "playin",
+    "PUBG",
+    "scrappin",
+    "Siedge",
+    "syncdb",
+    "tearin",
+    "thinkin",
+    "timeformat",
+    "turnin",
+    "usea"
+  ]
 }

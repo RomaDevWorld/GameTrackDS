@@ -1,17 +1,12 @@
-import { Client, GatewayIntentBits, Collection } from "discord.js"
+import { Client, GatewayIntentBits, Collection } from 'discord.js'
 
-const client = new Client({ intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.GuildMembers,
-    GatewayIntentBits.GuildPresences
-] })
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildMembers, GatewayIntentBits.GuildPresences] })
 
-export default client;
+export default client
 
-declare module "discord.js" {
-    export interface Client {
-      commands: Collection<unknown, any>
-      activities: any
-    }
+declare module 'discord.js' {
+  export interface Client {
+    commands: Collection<unknown, any>
+    activities: any
+  }
 }
