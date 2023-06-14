@@ -34,8 +34,6 @@ module.exports = {
     if (!games[0] && user.id === interaction.user.id) return await interaction.reply({ content: `${await getLocale(interaction.locale, 'user-self-nostat')}`, ephemeral: true })
     else if (!games[0] && user.id !== interaction.user.id) return await interaction.reply({ content: `${await getLocale(interaction.locale, 'user-user-nostat', user)}`, ephemeral: true })
 
-    console.log(user)
-
     const embed = new EmbedBuilder()
       .setAuthor({ name: await getLocale(interaction.locale, 'user-embed-author', user.discriminator === '0' ? `@${user.username}` : user.username) })
       .setDescription(games.map((i: { dataValues: { game: { name: any }; time: any } }) => `**${i.dataValues.game.name}** - ${formatTime(i.dataValues.time)}`).join('\n'))
