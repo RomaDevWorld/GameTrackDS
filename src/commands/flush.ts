@@ -5,7 +5,6 @@ import Activity from '../models/activity'
 module.exports = {
   data: new SlashCommandBuilder().setName('flush').setDescription('Flush all the data about the games you have played').setDescriptionLocalizations({
     uk: 'Обнулити всі дані, про те які ігри ти грав',
-    'en-GB': 'Time for a bit of digital cleaning, eh?',
     ru: 'RUSSIA IS A TERRORIST STATE',
   }),
   async execute(interaction: any) {

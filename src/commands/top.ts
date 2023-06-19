@@ -10,13 +10,11 @@ module.exports = {
     .setDescription('Get the top 10 players in a specific game')
     .setDescriptionLocalizations({
       uk: 'Отримати топ 10 гравців у конкретній грі',
-      'en-GB': "Get ready to meet the good chaps who are tearin' it up and taking names in their game of choice!",
       ru: 'RUSSIA IS A TERRORIST STATE',
     })
     .addStringOption((option) =>
       option.setName('game').setDescription('Game to get stats').setRequired(true).setDescriptionLocalizations({
         uk: 'Гра по якій потрібно отримати статистику',
-        'en-GB': "Write down a game so we'll get it for ya",
         ru: 'RUSSIA IS A TERRORIST STATE',
       })
     ),

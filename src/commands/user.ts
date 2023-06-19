@@ -10,12 +10,10 @@ module.exports = {
     .setDescription('Get a stat for specific user')
     .setDescriptionLocalizations({
       uk: 'Отримати статистику для вказаного учасника',
-      'en-GB': "If you're lookin' to get the inside particular user's stats, then we've got the lowdown for ya!",
       ru: 'RUSSIA IS A TERRORIST STATE',
     })
     .addUserOption((option) =>
       option.setName('user').setDescription('User to get stats').setDescriptionLocalizations({
-        'en-GB': "Put a usea' innere mate",
         uk: 'Учасник, статистику якого потрібно отримати',
         ru: 'RUSSIA IS A TERRORIST STATE',
       })

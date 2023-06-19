@@ -28,7 +28,7 @@ You can use `/flush`
 
 # Want to contribute? Help localize this bot to a different languages.
 
-Currently our bot has 3 languages: American English, Ukrainian and Bri'ish (A meme language)
+Currently our bot supports 2 languages: American English and Ukrainian
 
 Clone this repository using `git clone git@github.com:RomaDevWorld/GameTrackDS.git`, make some changes in `/src/functions/getLocale.ts`, then commit and push your changes with `git commit -a -m "Change: Localization"`
 
