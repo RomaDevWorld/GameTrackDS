@@ -1,23 +1,11 @@
 import { Sequelize } from 'sequelize'
+import { config } from 'dotenv'
+config()
 
-// You can use this to connect to your MySQL server, if you prefer
-// const sequelize = new Sequelize(
-//   process.env.DB_NAME!,
-//   process.env.DB_USERNAME!,
-//   process.env.DB_PASSWORD!,
-//   {
-//     host: process.env.DB_HOST,
-//     port: process.env.DB_PORT ? parseInt(process.env.DB_PORT) : undefined,
-//     dialect: "mysql",
-//     logging: false,
-//   }
-// )
-
-const sequelize = new Sequelize('database', 'username', 'password', {
-  host: 'localhost',
-  dialect: 'sqlite',
-
-  storage: __dirname + '/../database.sqlite',
+const sequelize = new Sequelize(process.env.DB_NAME as string, process.env.DB_USERNAME as string, process.env.DB_PASSWORD as string, {
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT ? parseInt(process.env.DB_PORT) : undefined,
+  dialect: 'postgres',
   logging: false,
 })
 

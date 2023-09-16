@@ -1,19 +1,5 @@
 {
   "editor.tabSize": 2,
   "prettier.prettierPath": "./node_modules/prettier",
-  "cSpell.words": [
-    "пінгу",
-    "Понг",
-    "cooldown",
-    "linebreak",
-    "MORDHAU",
-    "nogame",
-    "nolinks",
-    "nopermission",
-    "nostat",
-    "PUBG",
-    "Siedge",
-    "syncdb",
-    "timeformat",
-  ]
+  "cSpell.words": ["пінгу", "Понг", "cooldown", "linebreak", "MORDHAU", "nogame", "nolinks", "nopermission", "nostat", "postgres", "PUBG", "Siedge", "syncdb", "timeformat"]
 }
